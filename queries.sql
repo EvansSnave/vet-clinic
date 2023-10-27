@@ -47,3 +47,29 @@ MAX(weight_kg) AS max_weight FROM animals GROUP BY species;
 SELECT species, AVG(escape_attempts) AS average_escape_attempts
 FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND 
 '2000-12-31' GROUP BY species;
+
+SELECT owners.full_name AS owner, STRING_AGG(animals.name, ', ') 
+AS animals FROM owners JOIN animals ON owners_id = owners.id
+WHERE full_name = 'Melody Pond' GROUP BY owner;
+
+SELECT animals.name AS pokemon FROM animals JOIN species ON species_id 
+= species.id WHERE species.name = 'Pokemon';
+
+SELECT full_name AS owner, STRING_AGG(animals.name, ', ') AS pokemon
+FROM owners LEFT JOIN animals ON owners.id = owners_id 
+GROUP BY owners.full_name;
+
+SELECT species.name AS animal_type, COUNT(animals.species_id) AS amount
+FROM species JOIN animals ON species.id = species_id GROUP BY animal_type;
+
+SELECT owners.full_name AS owner, animals.name AS digimon FROM owners
+JOIN animals ON owners.id = owners_id JOIN species ON species.id = species_id
+WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
+
+SELECT animals.name AS Mr_Winchester_pets, animals.escape_attempts
+FROM animals JOIN owners ON owners_id = owners.id WHERE owners.full_name = 'Dean Winchester'
+AND animals.escape_attempts = 0;
+
+SELECT owners.full_name AS owners, COUNT(animals.owners_id) AS pets_amount
+FROM owners LEFT JOIN animals ON owners.id = owners_id GROUP BY owners
+ORDER BY pets_amount DESC;

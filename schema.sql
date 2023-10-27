@@ -10,3 +10,23 @@ CREATE TABLE animals (
 );
 
 ALTER TABLE animals ADD species char(20);
+
+CREATE TABLE owners (
+    id SERIAL PRIMARY KEY,
+    full_name varchar(25) DEFAULT 'Unknown',
+    age int
+);
+
+CREATE TABLE species (
+    id SERIAL PRIMARY KEY,
+    name varchar(20)
+);
+
+ALTER TABLE animals ADD PRIMARY KEY (id);
+ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD species_id int;
+ALTER TABLE animals ADD CONSTRAINT key_animal_species 
+FOREIGN KEY (species_id) REFERENCES species(id);
+ALTER TABLE animals ADD owners_id int;
+ALTER TABLE animals ADD CONSTRAINT key_animals_owners
+FOREIGN KEY (owners_id) REFERENCES owners(id);
