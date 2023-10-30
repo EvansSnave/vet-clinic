@@ -206,3 +206,7 @@ SELECT
 	COUNT(CASE WHEN species.name = 'Digimon' THEN 1 ELSE NULL END) AS digimon_visit_amount
 	FROM visits JOIN vets ON vets_id = vets.id JOIN animals ON animals_id = animals.id
 	JOIN species ON species_id = species.id WHERE vets.name = 'Maisy Smith' GROUP BY vets.name;
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits WHERE animals_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits WHERE vets_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners WHERE email = 'owner_18327@mail.com';
