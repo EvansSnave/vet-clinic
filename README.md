@@ -103,6 +103,16 @@ When you run these instructions and get answers, you can snap pictures of the re
 - Twitter: [Kroja13](https://twitter.com/Kroja13)
 - LinkedIn: [Kevin Cruz](https://www.linkedin.com/in/kevin-cruz-25159a201/)
 
+👤 **Maximo Ortelli**
+- GitHub: [@MaximoOrtelli](https://github.com/maximoortelli)
+- LinkedIn: [MaximoOrtelli](https://www.linkedin.com/in/maximo-ortelli-rueda/)
+
+👤 **Ademola Owoeye**
+- GitHub: [Ademola-coding](https://github.com/Ademola-coding)
+- Twitter: [@devAdemolaOfNig](https://twitter.com/devAdemolaOfNig)
+- LinkedIn: [Ademola Owoeye](https://www.linkedin.com/in/ademola-owoeye/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
