@@ -1,10 +1,8 @@
-# curriculum-databases-projects-template
-
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+<h1>Vet-Clinic Database Project</h1>
+Welcome to this project, where you'll employ a relational database to establish the foundational data framework for a veterinary clinic. Your tasks will be designing a table dedicated to housing details about various animals, populating it with relevant data, and executing queries to retrieve information.
 
 
-## Getting Started
+## Before Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
 
@@ -14,80 +12,32 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
-
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Vet-Clinic Database <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+Welcome to this project where we'll build a special database for a vet clinic. This database will hold information about different animals, like their names, when they were born, if they tried to escape, if they've been neutered, how heavy they are, and what kind of animal they are. We'll use a language called SQL to set up the database, put in some example info, and ask questions to get useful answers.
 
-**[your_project__name]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
+The project is built using SQL for database management.
+Getting Started
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
 
 <details>
 <summary>Database</summary>
@@ -96,25 +46,11 @@ After you're finished please remove all the comments and instructions!
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- **Database Management:** Create and manage a relational database using SQL commands.
+- **Data Manipulation:** Add, update, and remove data of the database using SQL statements.
+- **Querying Data:** Utilize SQL queries to extract data from the database.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,103 +58,50 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+### 🛠 Setup <a name="setup"></a>
 
-To get a local copy up and running, follow these steps.
+1. Clone this repository to your local machine:
 
-### Prerequisites
-
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
+```bash
+git clone https://github.com/evanssnave/vet-clinic
 ```
- -->
 
-### Setup
+2. Set up a PostgreSQL database named `vet_clinic`.
 
-Clone this repository to your desired folder:
+### Database Structure
 
-<!--
-Example commands:
+The `schema.sql` file includes SQL commands to create the `animals` table with the following columns:
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+- `id`: A unique identifier for each animal.
+- `name`: The name of the animal.
+- `date_of_birth`: The birthdate of the animal.
+- `escape_attempts`: The number of escape attempts made by the animal.
+- `neutered`: A boolean indicating if the animal is neutered.
+- `weight_kg`: The weight of the animal in kilograms.
+
+You can execute the `schema.sql` file to create the table structure by running:
+
+```bash
+psql -d vet_clinic -a -f schema.sql
 ```
---->
 
-### Install
+Make sure you have PostgreSQL set up on your computer.
 
-Install this project with:
+## 🛠 Usage <a name="usage"></a>
+The data.sql file has special instructions written in SQL. These instructions make pretend information go into the animals table. This way, the table gets filled up with details about lots of animals.
 
-<!--
-Example command:
+The queries.sql file has more SQL instructions. These help answer different questions about the animal info. The questions are about things like picking certain animals using rules, getting specific details, and doing math with all the info added up.
 
-```sh
-  cd my-project
-  gem install
-```
---->
-
-### Usage
-
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+When you run these instructions and get answers, you can snap pictures of the results to show what you did.
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Kevin Cruz**
+- GitHub: [EvansSnave](https://github.com/EvansSnave)
+- Twitter: [Kroja13](https://twitter.com/Kroja13)
+- LinkedIn: [Kevin Cruz](https://www.linkedin.com/in/kevin-cruz-25159a201/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,21 +109,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+- **User Login:** Make a way for users to log in and do things based on what they're allowed to do.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -248,9 +117,8 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project and know someone who might find it helpful, please share it.
+Or give it a **star** ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -258,25 +126,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+I want to give a big thanks to Microverse for this great opportunity.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -284,8 +134,6 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](https://github.com/EvansSnave/vet-clinic/blob/create-tables/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
